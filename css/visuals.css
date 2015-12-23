@@ -1,0 +1,210 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+****Edited by Terry Clark****          */
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+strong,
+i,
+ol,
+ul,
+li,
+form,
+label,
+footer,
+header,
+hgroup {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow: scroll;
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    cursor: cell;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.revealOnScroll:not(.headerHackBox, .hackBox) {
+    opacity: 0;
+    /* Make elements hidden before reveal on scrolling the page*/
+}
+/* Import fonts from Google Fonts */
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300italic,400italic,700,700italic,900,900italic);
+/* ---- Main Settings ---- */
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+h1,h2,
+h3,h4,
+h5 {
+    font-style: normal;
+    font-weight: 900;
+}
+
+h3 {
+    font-size: 1.6em;
+    padding-bottom: 10px;
+}
+
+p {
+    font-size: 1.5em;
+    line-height: 2.4em;
+}
+
+a,
+a:visited,
+a:link {
+    color: #fff;
+    -webkit-transition: .4s linear;
+    -o-transition: .4s linear;
+    transition: .4s linear;
+}
+
+a:hover {
+    color: #ccc;
+}
+
+.back {
+    position: absolute;
+    margin-left: 50px;
+    padding-top: 30px;
+    width: 36px;    
+}
+
+
+#main {
+    position: relative;
+    background-color: #cbad98;
+    color: #fff;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 20px 0 50px 0;
+    
+}
+
+.mainTitle {
+    margin: auto;
+    font-style: italic;
+    font-weight: 300;
+    text-align: center;
+    font-size: 4em;
+}
+
+.section {
+    width: 70%;
+    margin: 0 auto;
+    background: #fff;
+    color: #000;
+    border-radius: 5px;
+    padding:20px 0 40px;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.25);
+    margin-bottom: 50px;
+}
+
+.section a{
+    color: #000;
+}
+
+.sectionTitle {
+    font-size: 3em;
+    text-align: center;
+    margin: 30px 0 20px 0;
+}
+
+.middle {
+    text-align: center;
+}
+
+@media screen and (max-width:800px) {
+    .download {
+        display: none;
+    }
+    
+    canvas {
+        display: none;
+    }
+    
+    .downloadText {
+        padding-top: 50px;
+        font-size: 1.5em; 
+    }
+    .section {
+        width: 90%;
+        border-radius: 0px;
+    }
+    .mainTitle {
+        font-size: 3em;
+    }
+    .sectionTitle {
+        font-size: 2em;
+    }
+    
+    h3 {
+        font-size: 1.4em;
+    }
+    p {
+        font-size: 1.4em;
+    }
+    footer p {
+        position: absolute;
+        text-align: center;
+        top: 20px;
+        left: 0;
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .section {
+        width: 100%;
+    }
+    .titleLarge {
+        font-size: 3.6em;
+    }
+    p {
+        font-size: 1em;
+    }
+}

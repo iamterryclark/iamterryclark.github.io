@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/report.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+
+    <title>A Report of my Website</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="title">
+                <h1 class="title">My Report</h1>
+                <p><a href="http://doc.gold.ac.uk/~tclar051/webprog/CW5/index.php" target="_blank">My Site Link</a></p>
+                <br />
+            </div>
+            <div id="intro">
+                <h2 class="subTitle">Aim</h2>
+                <div class="content">
+                    <p>The main idea for this project was to create a personal website, where I could promote my skills and display the projects which I am, and will be, most proud of during my time at Goldsmiths.</p>
+                    <p>I wanted to develop a clean and modern looking site which took advantage of web design trends between 2014-15. This includes a large header image, a one page flat layout, clean and crisp fonts and most of all <strong>responsive</strong>.</p>
+                    <p>After previously having read lots of resources on <strong>UXPin</strong> <em>(UXpin, 2010)</em> I was able to find lots of great examples of websites, one of which caught my eye the most <em>(Weainplastic.com - Roland L&#246;sslein. 2015)</em> as it had some very interesting <strong>animated SVG graphics</strong> and fading/navigtion animations.</p>
+                    <p>To achieve this I firstly created a mockup and then developed the site so that  could spend more time on the content and have an understanding on the style of the site beforehand. Please see image attached <a href="./images/Mock-Up.png" target="_blank">here</a></p>
+                </div>
+            </div>
+            <div id="used">
+                <h2 class="subTitle">Code/Information I used directly</h2>
+                <div class="content">
+                    <p>The fonts on the site came from <strong>Google fonts</strong> (Lato), I imported these through the CSS as I felt this make the html much cleaner.</p>
+                    <p>I have also used <strong>font-awesome</strong> <em>(Font-Awesome, 2015)</em> a library of icons which are free to use, which help to indicate certain features of the site such as a down arrow which signifies that there is some more content below. Furthermore the hamburger menu is a commonly used icon although I have started to read more about its issues and may look at other choices of navigation in the future.</p>
+                    <p><strong>revealOnScroll.js</strong> has given me the recursive fading effects when the user scrolls up and down the site. I feel this attracts the user's attention to the important parts of my site and adds an element of fun/interaction to it. I used a tutorial that I found online to implement it but there still seem to be issues with this and the smooth-scolling effects I have. <em>(http://blog.webbb.be/, 2014)</em></p>
+                    <p><strong>animate.css</strong> controls which kind of animation I would like to display on the site, it contains a library of different effect which can be see <em>(Animate.css - Daniel Eden, 2015)</em></p>
+                    <p><strong>modernizr.js</strong> helps with mobile interactivity and was needed to run revealOnScroll.js</p>
+                    <p>From my previous knowledge in website building, I understood that I need to use viewport in order to display the site correctly on mobile and not like a miniature version of my full desktop site. <em>(W3C - Responsive Web Design, 1999)</em></p>
+                    <p>Part of the extra criteria was to account for the changes in HTML5 and adapt this to work in IE8 and thus I found this resource and included it into the index.php file <em>(W3C - HTML5 Browser Support, 1999)</em></p>
+                </div>
+            </div>
+            <div id="adapted">
+                <h2 class="subTitle">Code I Adapted</h2>
+                <div class="content">
+                    <p>I borrowed the code of the navigation <em>(Weainplastic.com - Roland L&#246;sslein. 2015)</em> which included the transition of the top of the navigation and needed then to further adapt this for the mobile navigation by using the same effects but having the menu slide in from the left.</p>
+                    <p>I also used a piece of code which I found through code pen, an online code editor for prototyping, to help with the animation of the closing navigation button when in the mobile version of the site. I needed to adapt this by changing the size of the span widths and correcting the spacing between them to match with my font-awesome hamburger icon. <em>(CodePen - Jesse Couch. 2015)</em></p>
+                    <p>For the contact form I used a video which I had download which gave full details on how to use PHP mail() function to send myself an email via a contact form. I adjusted the text and also styled the form to match the style of the site. <em>(Udemy - Rob Percival, 2014)</em></p>
+                </div>
+            </div>
+            <div id="bestPoints">
+                <h2 class="subTitle">Things I Like</h2>
+                <div class="content">
+                    <p>I am really happy with the layout of the site, I believe it has a consistant style to it including colours and fonts used along with a good overall placement of content.</p>
+                    <p>The complexity is also satisfying to me as I wanted to push my skills with PHP, animations and building a compelete website from scratch.</p>
+                </div>
+            </div>
+            <div id="challenges">
+                <h2 class="subTitle">Current Challenges</h2>
+                <div class="content">
+                    <p>There are some current issues with the site which I was unable to fix and would like some further feedback regarding this, if possible.</p>
+                    <p>Unfortunately I was unable to implement the Jquery accordion / Flexslider into the site as there seems to be in clash between the code and this stops the slider from displaying. This was going to display some of the websites I have already worked on</p>
+                    <p>Another more visible issue is that the smooth-scrolling and revealOnScroll.js clash and do not work together. The navigation opens  but the links do not scroll to the specific sections. This is due to html and body CSS properties being set to a <code>height: 100%;</code> and this fixes the animation effects but stops the smooth scroll from working. Futhermore, I found that if I changed the <code>height: auto;</code> and set a <code>min-height: 100%;</code> then this resolves the smooth scroll issue but the animation will only work on load and not repeatedly as the user scrolls up and down the page.</p>
+                    <p>The last page which I created was the visuals page where I could display my favourite Processing sketches. Unfortunately one sketch does not load properly and I cannot find the reason why. I have tried both in-line (code pasted into the html document) and importing methods (using <code>data-processing-target=""</code> within the canvas element.</p>
+                    <p>Lastly, I would like to create a HTML CV page rather than linking to CV but due to time restrictionsI was unable to complete this for the project but will be something I later implement.</p>
+                </div>
+            </div>
+            <div id="evaluation">
+                <h2 class="subTitle">Evaluation</h2>
+                <div class="content">
+                    <p>This site has been verified through the W3C Validation checker and now comes back with no errors, I have further checked the CSS and tried to find a JavaScript's validation tool. Errors appear on font-awesome.css but with reference to the site <span>3</span> this shows that this is a normal occurence.</p>
+                </div>
+            </div>
+                <div id="references">
+                    <h2 class="subTitle">References</h2>
+                    <div class="content">
+                        <ol>
+                            <li>
+                                <blockquote>UXPin, 2010-2015 <em>UX Design Knowledge.w Shared</em> [ONLINE] Available at: <u><a href="https://www.uxpin.com/knowledge.htm">https://www.uxpin.com/knowledge.html</a></u> [Accessed 01 September 15]</blockquote>
+                            </li>
+                            <li>
+                                <blockquote>Weainplastic.com - Roland L&#246;sslein, 2015 <em>WE AIN'T PLASTIC - Creative Technologist and User Experience Designer</em> [ONLINE] Available at: <u><a href="http://www.weaintplastic.com" target="_blank">http://www.weaintplastic.com</a></u> [Accessed 01 December 15]</blockquote>
+                            </li>
+                            <li>
+                                <blockquote>Font Awesome - Dave Gandy, 2015 <em>Font Awesome The iconic font and CSS toolkit</em> [ONLINE] Available at: <u><a href="https://fortawesome.github.io/Font-Awesome/">https://fortawesome.github.io/Font-Awesome/</a></u> [Accessed 04 December 15]</blockquote>
+                            </li>
+                            <li>
+                                <blockquote>http://blog.webbb.be/, 2014 <em>TRIGGER CSS ANIMATIONS ON SCROLL</em> [ONLINE] Available at: <u><a href="http://blog.webbb.be/trigger-css-animation-scroll/" target="_blank">http://blog.webbb.be/trigger-css-animation-scroll/</a></u> [Accessed 04 December 15]</blockquote>
+                            </li>
+                            <li>
+                                <blockquote>Animate.css - Daniel Eden, 2015 <em>Animate.css Just-add-water CSS animations</em> [ONLINE] Available at: <u><a href="https://daneden.github.io/animate.css/">https://daneden.github.io/animate.css/</a></u> [Accessed 18 December 15]</blockquote>
+                            </li>
+                            <li>
+                                <blockquote>CodePen - Jesse Couch, 2015 <em>WE AIN'T PLASTIC - Creative Technologist and User Experience Designer</em> [ONLINE] - Available at: <u><a href="http://codepen.io/designcouch/pen/Atyop" target="_blank">http://codepen.io/designcouch/pen/Atyop</a></u> [Accessed 02 December 15]</blockquote>
+                            </li>
+                            <li>
+                                <blockquote>Udemy - Rob Percival, 2014 <em>The Complete Web Developer Course 14Weeks</em> [Online Video] 01 November 2014 - Available from: <a href="https://www.udemy.com/complete-web-developer-course/" target="_blank">https://www.udemy.com/complete-web-developer-course/</a> [Accessed: 04 December 2015]</blockquote>
+                            </li>
+                            <li>
+                                <blockquote>W3C - Responsive Web Design, 1999 <em>Responsive Web Design - The Viewport</em> [ONLINE] Available at: <u><a href="http://www.w3schools.com/css/css_rwd_viewport.asp">http://www.w3schools.com/css/css_rwd_viewport.asp</a></u> [Accessed 19 November 15]</blockquote>
+                            </li>
+                            <li>
+                                <blockquote>W3C - HTML5 Browser Support, 1999 <em>HTML5 Browser Support</em> [ONLINE] Available at: <u><a href="http://www.w3schools.com/html/html5_browsers.asp">http://www.w3schools.com/html/html5_browsers.asp</a></u> [Accessed 19 November 15]</blockquote>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="section">
+                <div class="left">
+                    <p class="addTop">Copyright TLC 2015</p>
+                </div>
+                <div class="right">
+                    <ul class="social">
+                        <li><a href="http://www.facebook.com/iamterryclark" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+                        <li><a href="http://www.linkedin.com/in/iamterryclark" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+                        <li><a href="http://www.twitter.com/iamterryclark" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+                        <li><a href="mailto:i.am.terryclark@gmail.com"><i class="fa fa-envelope-o fa-2x"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+</body>
+
+</html>

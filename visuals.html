@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/visuals.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="./js/jquery-1.11.3.min.js"></script>
+    <script src="./js/processing.min.js"></script>
+    <title>My Visuals</title>
+</head>
+
+<body>
+    <div id="main">
+        <div class="back">
+            <a href="./index.php"><i class="fa fa-chevron-left fa-3x"></i></a>
+        </div>
+        <div class="container middle">
+
+            <h2 class="mainTitle">My Visuals</h2>
+            <p class="middle downloadText">*Best viewed on a desktop browser*</p>
+            <br />
+            <p class="download"><a href="https://processing.org/download/">Download Processing here</a></p>
+
+            <div class="section">
+                <div class="full">
+                    <h1 class="sectionTitle">1. Rotation Loveliness</h1>
+                    <h3>My first visual made @ Goldsmiths</h3>
+                    <p>How to interact with it: Click it, Press 1, 2 and 3</p>
+                    <p class="download"><a href="./sketches/zip/RotationLoveliness.zip">Download it here</a></p>
+                    <script type="application/processing" target="rotLove">
+                        //Description:
+                        //RoatationLoveliness is an Interactive visualulisation.
+                        //I wanted to create a program which used PI as I am interested in circle 
+                        //movements and also is a value recently understood within my mathematics class.
+
+                        //METHOD:
+                        //The method used was to try different functions from the reference of Processing.org 
+                        //and to place them inside and outside of the loops to test the different looks of
+                        //the visualisations.
+
+                        //INSTRUCTIONS: 
+                        //Click the mouse to change the rotation.
+                        //Move the mouse in order to dim and change the colors.
+                        //Press 1, 2 or 3 to change rotation style.
+
+                      
+                        float speed;
+                        char store = '1';
+
+                        void setup() {
+                          size(450, 450);
+                          smooth();
+                        }
+
+                        void draw() {
+                          background(0);
+                          translate(height/2, width/2);
+                          for (int cX = 0; cX < 250; cX += 15) {
+                            for (int cY = 0; cY < 250; cY += 15) { 
+                              rotate(PI+speed);  
+                              noStroke();
+                              fill(cX-150+cY, cY + mouseX-150, mouseY-150, cY);
+                              
+                              store = (key > '0' && key < '4') ? key : store;
+
+                              if (store == '3') {
+                               ellipse(cX, cX, cY/10, cY/10); 
+                              } else if (store == '2') {
+                               ellipse(cY, cY, cY/10, cY/10); 
+                              } else if (store == '1') {
+                               ellipse(cX, cY, cY/10, cY/10);
+                              }
+                            }
+                          }  
+
+                            if (mousePressed) {
+                            speed -= 0.0001;
+                          } else {
+                            speed += 0.0001;
+                          }  
+                        }
+                    
+                    </script>
+                    <canvas id="rotLove" width="450" height="450"></canvas>
+                </div>
+            </div>
+            <div class="section">
+                <div class="middle full">
+                    <h1 class="sectionTitle">2. Fun with Vecs</h1>
+                    <h3>A visualisation using 1 set of vectors and an Array</h3>
+                    <p>How to interact with it: Click it, Press 1, 2 and 3
+                        <br /> Currently not working - Please download and try it out</p>
+                    <p class="download"><a href="./sketches/zip/FunVecs.zip">Download it here</a></p>
+                    <script type="application/processing" target="funVecs">
+                        /*
+                         Description: A visulisation that using the circular motion 
+                         References: https://www.youtube.com/watch?v=PP4_96YzBnM
+                         //Reference: http://www.openprocessing.org/sketch/106191
+                         Instructions: Press mouse to reverse the rotation. Press 1 to 3 to change visuals
+
+                         */
+
+                        QuadClass myQuad; //Initiate the QuadClass with a name
+                        ArrayList<QuadClass> myQuads = new ArrayList<QuadClass>(); // Store a dynamic list of Quads
+                        int amount = 30; // This is the amount of quads
+
+                        void setup() {
+                          size(640, 640);
+                          //used a for loop at the start to sraw the first points of the quad
+                          //These are assigned to 'point' within the QuadClass class
+                          //'pointChange' is 
+
+                          for (int i = 1; i < amount; i++) {
+                            myQuads.add(new QuadClass(width/3, height/8 + (i*15), 3*width/8, height/8, float(i)/160));
+                          }
+                        }
+
+                        void draw() {
+
+                          background(0);
+                          for (QuadClass quad : myQuads) {
+                            quad.run();
+                          }  
+                        }
+
+                       
+                        class QuadClass {
+                          PVector [] point = new PVector [4]; // points for quad
+                          PVector [] pointChange = new PVector [4]; // points changed for quad
+                          float x, y;
+                          float angle = 1; //0.05 is original angle
+                          int scalar = 200;
+                          float speed = 0.05;
+
+                          QuadClass( int x1, int y1, int _x1, int _y1, float _speed) {
+                            point[0] = new PVector(x1, y1);
+                            point[1] = new PVector(x1, y1 + _y1);
+                            point[2] = new PVector(x1 + _x1, y1 + _y1);
+                            point[3] = new PVector(x1 + _x1, y1);
+                            speed = _speed;
+                          }
+
+                          void run() {
+                            update();    
+                            display();
+                          }
+
+                          void update() {
+                            //this makes each point in the quad draw a circle
+                            x = sin(angle) * scalar/6; // x position for changed vector points
+                            y = cos(angle) * scalar/6; // y position for changed vector points
+
+                            if (mousePressed) {
+                              angle += speed;
+                            } else {
+                              angle -= speed;
+                            }
+
+                            pointChange[0] = new PVector(x, y).add(point[0]);
+                            pointChange[1] = new PVector(-x, -y).add(point[1]);
+                            pointChange[2] = new PVector(x, -y).add(point[2]);
+                            pointChange[3] = new PVector(x, y).add(point[3]);
+                          }
+
+                          void display() {
+                            noFill();
+
+                            if (key == '1') {
+                              strokeWeight(2);
+                              stroke(255, 255, 255);
+                                for (int count = 0; count < pointChange.length; count++) {
+                                  point(pointChange[count].x, pointChange[count].y);
+                                }
+                            } else if (key == '2') {
+                              strokeWeight(1);
+                              stroke(255, 255, 255);
+                              beginShape();
+                                for (int count = 0; count < pointChange.length; count++) {
+                                  vertex(pointChange[count].x, pointChange[count].y);
+                                }
+                              endShape(CLOSE);
+                            } else {
+                              strokeWeight(2);
+                              stroke(255, 255, 255);
+                                rect(pointChange[0].x, pointChange[0].y, 15, 15);
+                                ellipse(pointChange[1].x, pointChange[1].y, 5, 5);
+                                ellipse(pointChange[2].x, pointChange[2].y, 10, 10);
+                                rect(pointChange[3].x, pointChange[3].y, 5, 5);
+                            }
+                          }
+                        }
+                    </script>
+                    <canvas id="funVecs" width="640" height="640"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

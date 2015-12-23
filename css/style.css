@@ -1,0 +1,883 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+****Edited by Terry Clark****          */
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+strong,
+i,
+ol,
+ul,
+li,
+form,
+label,
+footer,
+header,
+hgroup {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+html,
+body {
+    width: 100%;
+    /*height: 100%; /* issue with smooth scolling */
+/*
+    use this to fix the smooth scroll issue
+    but animation effects will stop working.
+    
+    height: auto;
+    min-height: 100%;
+*/
+    height: auto;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: scroll;
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    cursor: cell;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.revealOnScroll {
+    opacity: 0;
+    /* Make elements hidden before reveal on scrolling the page*/
+}
+/* Import fonts from Google Fonts */
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300italic,400italic,700,700italic,900,900italic);
+/* ---- Main Settings ---- */
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-style: normal;
+    font-weight: 900;
+}
+
+p {
+    font-size: 1.4em;
+    line-height: 1.4em;
+    letter-spacing: 0.02em;
+
+}
+
+a,
+a:visited,
+a:link {
+    color: #fff;
+    -webkit-transition: .4s linear;
+    -o-transition: .4s linear;
+    transition: .4s linear;
+}
+
+a:hover {
+    color: #ccc;
+}
+
+#main {
+    margin: 0 auto;
+}
+
+.mainTitle {
+    font-style: italic;
+    font-weight: 300;
+    text-align: center;
+    font-size: 5em;
+    margin-bottom: 50px;
+}
+/* ---- Diagonal DIVs (Currently Not Working as not responsive) ---- */
+/* Reference: http://lawrencenaman.com/css/responsive-slanted-divs-with-css/
+
+#whoiam::before,
+#thingsido::before,
+#interests::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    overflow: visible;
+    width: 100%;
+    height: 100px;
+    z-index: 1;
+    transform: skew(0deg, -3deg);
+    -ms-transform: skew(0deg, -3deg);
+    -webkit-transform: skew(0deg, -3deg);
+}
+
+#whoiam::before {
+    top: 810px;
+    background: #fff;
+}
+
+#thingsido::before,
+#thingsido::after {
+    top: 1510px;
+    background: #cbad98;
+}
+
+#thingsido::after {
+    top: 3030px;
+    background: #fff;
+}
+
+*/
+
+#whoiam,
+#thingsido,
+#interests,
+#contact {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    padding: 100px 0;
+    z-index: 1;
+}
+
+#contact {
+    padding-bottom: 50px;
+}
+
+#thingsido,
+#contact {
+    background-color: #cbad98;
+    color: #fff;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+/* ---- Header ---- */
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 90px;
+    color: #fff;
+    font-size: 3.7em;
+    z-index: 1;
+}
+
+.hamburger {
+    position: fixed;
+    top: 17.5px;
+    right: 90px;
+    background: #d1c0b4;
+    color: #fff;
+    padding: 1px 6px;
+    border-radius: 5px;
+    font-size: 1.3em;
+    z-index: 999;
+    
+    -webkit-transition: .7s cubic-bezier(.77, 0, .175, 1);
+    -o-transition: .7s cubic-bezier(.77, 0, .175, 1);
+    transition: .7s cubic-bezier(.77, 0, .175, 1);
+}
+
+.invisible {
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.ham-close {
+    opacity: 0;
+    -webkit-transition: .7s cubic-bezier(.77, 0, .175, 1);
+    -o-transition: .7s cubic-bezier(.77, 0, .175, 1);
+    transition: .7s cubic-bezier(.77, 0, .175, 1);
+}
+
+.nav {
+    position: fixed;
+    width: 100%;
+    height: 5em;
+    top: -6em;
+    text-align: center;
+    line-height: 4.9em;
+    background-color: #d1c0b4;
+    border-bottom: 1px solid #afa095;
+    z-index: 998;
+    /* REFERENCE: http://weaintplastic.com/ */
+    -webkit-transition: top .7s cubic-bezier(.77, 0, .175, 1);
+    -o-transition: top .7s cubic-bezier(.77, 0, .175, 1);
+    transition: top .7s cubic-bezier(.77, 0, .175, 1);
+}
+
+.open-nav {
+    top: 0;
+    left: 0;
+}
+
+.nav li {
+    display: inline-block;
+    margin: 0 1.4em;
+}
+
+.nav a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.3em;
+    letter-spacing: 1.5px;
+    color: #fff;
+}
+
+.nav a:hover {
+    color: #775b47;
+}
+
+.nav .active {
+    border-bottom: 9px solid #fff;
+}
+/*---- Main Section ----*/
+
+.splashScreen {
+    position: relative;
+    padding-top: 160px;
+    padding-bottom: 100px;
+    height: 600px;
+    background-image: url(../images/memain.png);
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.godown {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 40px;
+    color: #fff;
+}
+
+.godown i:hover {
+    color: #fff !important;
+}
+
+.titleLarge {
+    text-align: center;
+    font-size: 10em;
+}
+
+.titleLarge .ital {
+    font-style: italic;
+    font-weight: 300;
+    color: #fff;
+}
+
+.titleLarge .boldMofo {
+    font-weight: 900;
+    color: #fff;
+}
+/* ---- Who I Am Section ---- */
+
+#whoiam p {
+    margin: 60px auto;
+}
+
+.imageMe img {
+    width: 300px;
+}
+/* ---- Things I Do Section ----*/
+
+.sectionTitle {
+    font-size: 3em;
+    text-align: center;
+    margin: 30px 0 20px 0;
+}
+
+.sectionTitle i,
+.subSectTitle i {
+    margin-right: 10px;
+}
+
+.subSectTitle {
+    font-size: 3em;
+    font-style: italic;
+    font-weight: 200;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.section p {
+    margin: 0 20px;
+}
+
+.section .icon {
+    width: 50px;
+    margin: 0 10px -10px 0;
+}
+
+#cv {
+    margin-top: 50px;
+    text-align: center;
+}
+
+#cv ul {
+    display: inline-block;
+    margin: 50px 30px;
+}
+
+.iconTitle {
+    margin-bottom: 10px;
+}
+/* ---- Interests Section ---- */
+
+.headerHackBox img {
+    width: 23%;
+    margin: 50px auto;
+}
+
+.hackBox {
+    position: relative;
+    display: inline-block;
+    width: 23%;
+}
+
+.hackImage {
+    margin: 10px;
+}
+
+.hackImage img {
+    width: 100%;
+    vertical-align: middle;
+}
+/* ---- Contact Section ---- */
+
+.formBack {
+    width: 80%;
+    margin: 5% auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    font-size: 2em;
+    font-weight: 900;
+    font-style: normal;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: #000;
+    width: 94%;
+    margin: 9px auto;
+}
+
+input,
+textarea {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    line-height: 1em;
+    font-size: 1em;
+    background: #efefef;
+    border: 1px solid #dedede;
+    padding: 10px;
+    color: #3a3a3a;
+    -webkit-transition: .2s linear;
+    -o-transition: .2s linear;
+    transition: .2s linear;
+}
+
+textarea {
+    height: 13em;
+}
+
+.notWhite {
+    color: #000;
+    text-align: left !important;
+    margin-top: 10px !important;
+}
+
+input:focus,
+textarea:focus {
+    color: #fff;
+    background: #aaa;
+}
+
+::-webkit-input-placeholder {
+    font-size: 1.2em;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    font-size: 1.2em;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    font-size: 1.2em;
+}
+
+:-ms-input-placeholder {
+    font-size: 1.2em;
+}
+
+#submit {
+    margin: 0 auto;
+    width: 40%;
+    height: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+    -webkit-transition: .2s linear;
+    -o-transition: .2s linear;
+    transition: .2s linear;
+}
+
+#submit:hover {
+    background: #aaa;
+    color: #fff;
+}
+
+.alert-success,
+.alert-danger {
+    width: 70%;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+    border-radius: 2px;
+}
+
+.alert-success {
+    color: #0B7C0A;
+    background-color: rgb(173, 216, 173);
+    border: 1px solid #0B7C0A;
+    line-height: 1.1em;
+}
+
+.alert-danger {
+    color: #860809;
+    background-color: #f7b4b5;
+    border: 1px solid #860809;
+}
+
+/* ---- Footer Section ---- */
+
+footer {
+    position: relative;
+    background: #777;
+    color: #fff;
+}
+
+footer .section {
+    padding: 40px 3em 80px;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+footer p {
+    padding-top: 5px;
+}
+
+.social li {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1.3em;
+}
+
+.backToTop {
+    display: none;
+/*
+    position: absolute;
+    background-color: #d1c0b4;
+    color: #fff;
+    border-radius: 3px;
+    bottom: 20px;
+    left: 24px;
+    width: 33px;
+    height: 30px;
+    padding: 2px 5px 10px 5px ;
+    z-index: 100000;
+*/
+}
+
+/* ---- Extra CSS Styling ---- */
+
+strong {
+    font-weight: 500;
+}
+
+.thin {
+    font-weight: 200;
+    font-style: italic;
+}
+
+.addSome {
+    font-size: 3em;
+    line-height: 1.3em;
+    margin-bottom: 20px;
+}
+
+.recently {
+    padding-top: 30px;
+}
+
+.hackathon {
+    font-size: 4em;
+    margin-top: 50px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.middle {
+    text-align: center;
+}
+
+.third {
+    width: 33%;
+}
+
+.twoThirds {
+    width: 66%;
+    margin-bottom: 100px;
+}
+
+.half {
+    width: 50%;
+    margin-bottom: 50px;
+}
+
+.full {
+    width: 100%;
+    margin-bottom: 50px;
+}
+/* Reference http://inspirationalpixels.com/tutorials/creating-an-accordion-with-html-css-jquery#html */
+/*----- Accordion -----*/
+/*
+.accordion,
+.accordion * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.accordion {
+    overflow:hidden;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    background: #f7f7f7;
+}*/
+/*----- Section Titles -----*/
+/*
+.accordion-section-title {
+    width: 100%;
+    padding: 15px;
+    display: inline-block;
+    border-bottom: 1px solid #1a1a1a;
+    background: #333;
+    transition: all linear 0.15s;
+    font-size: 1.200em;
+    text-shadow: 0px 1px 0px #1a1a1a;
+    color: #fff;
+}
+
+.accordion-section-title.active,
+.accordion-section-title:hover {
+    background: #4c4c4c;
+    text-decoration: none;
+}
+
+.accordion-section:last-child .accordion-section-title {
+    border-bottom: none;
+}
+/*
+
+/*----- Section Content -----*/
+/*
+.accordion-section-content {
+    padding: 15px;
+    display: none;
+}
+*/
+/* End of reference */
+/* ---- Responsive ---- */
+
+@media screen and (max-width: 1180px) {
+    #whoiam .container,
+    #thingsido .container,
+    #interests .container,
+    #contact .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .nav li {
+        margin: 0 1em;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .nav li {
+        margin: 0 0.4em;
+    }
+    
+    .imageMe {
+        width: 300%;
+    }
+    #whoiam p {
+        margin: 0px auto;
+    }
+    .twoThirds {
+        text-align: center;
+        margin-bottom: 0;
+        width: 100%;
+    }
+    .left {
+        float: none;
+        text-align: center;
+    }
+    .half {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .hamburger {
+        display: none;
+    }
+   
+    .nav {
+        left: -100%;
+        top: 0;
+        height: 100%;
+        background-color: #d1c0b4;
+
+        -webkit-transition: left .7s cubic-bezier(.77, 0, .175, 1);
+        -o-transition: left .7s cubic-bezier(.77, 0, .175, 1);
+        transition: left .7s cubic-bezier(.77, 0, .175, 1);
+    }
+    .nav li {
+        display: block;
+        margin: 0;
+        width: 100%;
+    }
+    
+    .open-nav {
+        left: 0;
+        height: 100%;
+    }
+    
+    .logo {
+        font-size: 3em;
+        top: 25px;
+        left: 20px;
+    }
+    /* Mobile Hamburger Animated */
+    #nav-icon, .navWrap {
+        position: fixed;
+        width: 37px;
+        height: auto;
+        cursor: pointer;
+        z-index: 999;
+    }
+    
+    #nav-icon {
+        right: 30.6px;
+        top: 30px;
+    }
+    
+    .navWrap {
+        top: 24px;
+        right: 25px;
+        background-color: #d1c0b4;
+        border-radius: 3px;
+        height: 35px;
+        padding: 5px 6px;
+
+        
+    }
+    
+    #nav-icon span {
+        display: block;
+        position: absolute;
+        height: 7px;
+        width: 100%;
+        background: #fff;
+        border-radius: 2px;
+        opacity: 1;
+        left: 0;
+        z-index: 100000;
+        
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .25s ease-in-out;
+        -moz-transition: .25s ease-in-out;
+        -o-transition: .25s ease-in-out;
+        transition: .25s ease-in-out;
+    }
+    #nav-icon span:nth-child(1) {
+        top: 0px;
+    }
+    #nav-icon span:nth-child(2),
+    #nav-icon span:nth-child(3) {
+        top: 12px;
+    }
+    #nav-icon span:nth-child(4) {
+        top: 24px;
+    }
+    #nav-icon.open span:nth-child(1) {
+        top: 18px;
+        width: 0%;
+        left: 50%;
+    }
+    #nav-icon.open span:nth-child(2) {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    #nav-icon.open span:nth-child(3) {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    #nav-icon.open span:nth-child(4) {
+        top: 18px;
+        width: 0%;
+        left: 50%;
+    }
+
+    /* End of Mobile Hamburger */
+    .splashScreen {
+        padding-top: 100px;
+        padding-bottom: 50px;
+        height: 400px;
+        background-image: url(../images/memain.png);
+        background-position: top center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .titleLarge {
+        text-align: center;
+        margin-top: 0px;
+        font-size: 6em;
+    }
+    .mainTitle {
+        font-size: 3em;
+    }
+    .sectionTitle {
+        font-size: 2em;
+    }
+    .subSectTitle {
+        font-size: 2em;
+    }
+    p {
+        font-size: 1.4em;
+    }
+    .addSome {
+        font-size: 2em;
+    }
+    .section .icon {
+        width: 40px;
+        margin: 0 8px -8px 0;
+    }
+    .hackBox {
+        position: relative;
+        display: block;
+        margin: 0 auto 30px auto;
+        width: 60%;
+    }
+    .headerHackBox img {
+        width: 60%;
+        margin: 50px 0 30px;
+    }
+    .hackathon {
+        font-size: 3em;
+    }
+    footer .section {
+        position: relative;
+    }
+    footer p {
+        position: absolute;
+        text-align: center;
+        top: 20px;
+        left: 0;
+        right: 0;
+    }
+    .social {
+        position: absolute;
+        text-align: center;
+        top: 55px;
+        left: 0;
+        right: 0;
+    }
+    .social li {
+        display: inline-block;
+        margin-right: 10px;
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    #whoiam,
+    #thingsido,
+    #interests,
+    #contact {
+        padding: 50px 0;
+        z-index: 400;
+    }
+    .titleLarge {
+        margin-top: 60px;
+        font-size: 3.6em;
+    }
+    .formBack {
+        width: 90%;
+        margin: 30px auto;
+        padding: 10px;
+    }
+    p {
+        font-size: 1em;
+    }
+    .addSome {
+        font-size: 2em;
+    }
+}

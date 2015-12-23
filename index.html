@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- For responsive devices: http://www.w3schools.com/css/css_rwd_viewport.asp -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Terry Clark - Creative Computing Student This Site showcases the work that I will undertake at Goldsmiths university and will eventually be my personal page to use in my career.">
+    <meta name="keywords" content="Front-End, Web, Design, Creative Computing Student, Terry, Clark, Terry Clark, HTML ,CSS ,JavaScript">
+    <meta name="author" content="Terry Clark">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <!-- For icons all over the site-->
+    <link rel="stylesheet" href="css/style-min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <!--  To add once I fix issue with accordian and flexslider  <link rel="stylesheet" href="plugins/FlexSlider/flexslider.css">-->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/script-min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <!--Reference: http://www.w3schools.com/html/html5_browsers.asp-->
+    <!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    <title>Terry Clark - Creative Computing Student</title>
+</head>
+
+<body>
+    <nav role="navigation">
+        <div class="hamburger right">
+            <i class="fa fa-bars fa-2x"></i>
+        </div>
+        <ul class="nav">
+            <li class=""><a href="#main">Home</a></li>
+            <li class=""><a href="#whoiam">Who I Am</a></li>
+            <li class=""><a href="#thingsido">Things I Do</a></li>
+            <li class=""><a href="#interests">Interests</a></li>
+            <li class=""><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="navWrap">
+        <div id="nav-icon" class="right">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div id="main">
+        <div class="splashScreen">
+            <h1 class="logo">TLC</h1>
+            <div class="titleLarge">
+                <h1 class="ital">Creative</h1>
+                <h1 class="boldMofo">Computing</h1>
+                <h1 class="ital">Student</h1>
+            </div>
+            <div class="godown">
+                <a href="#whoiam"><i class="fa fa-chevron-down fa-4x"></i></a>
+            </div>
+        </div>
+    </div>
+    <div id="whoiam">
+        <div class="container">
+            <h2 class="mainTitle">Who I Am</h2>
+            <div class="section">
+                <div class="third left">
+                    <div class="imageMe revealOnScroll" data-animation="fadeInLeft">
+                        <img src="images/meFace.png" alt="An image of me, Terry Clark">
+                    </div>
+                </div>
+                <div class="left twoThirds revealOnScroll" data-animation="fadeInRight">
+                    <p>
+                        Hey, I'm Terry!
+                        <br />
+                        <br /> A Creative Computing student at Goldsmiths, University of London. My passion is to build all sorts with code such as
+                        <strong>audio visual programs</strong>, <strong>API’s</strong>,
+                        <strong>web scrapers</strong> and most of all <strong>websites</strong>. I also love to my share knowledge and learn with others.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div id="thingsido">
+        <div class="container">
+
+            <h1 class="mainTitle">Things I Do</h1>
+
+            <div id="websites" class="revealOnScroll" data-animation="fadeIn">
+                <div class="titleArea">
+                    <h2 class="sectionTitle"><i class="fa fa-globe"></i>Websites</h2>
+                </div>
+                <div class="section left half">
+                    <h1 class="subSectTitle">
+                        <i class="fa fa-hand-paper-o"></i>Bespoke
+                    </h1>
+                    <p>
+                        I have been developing websites for over a year now, learning by reading eBooks by
+                        <a href="https://www.uxpin.com/knowledge.html" target="_blank">UXpin</a>, familiarising myself with current web standards and studying other websites. I now have a portfolio of work from developing on top of HTML5 themes to this current bespoke site.
+                    </p>
+                </div>
+                <div class="section left half">
+                    <h1 class="subSectTitle">
+                        <i class="fa fa-wordpress"></i>WordPress
+                    </h1>
+                    <p>
+                        I began my journey into web design by using WordPress CMS, where I started to grasp the awesome power of PHP. I can apply and set-up themes, edit them further with CSS, install and resolve issues with plugins. Please see my CV below for links to these.
+                    </p>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div id="visuals" class="revealOnScroll" data-animation="fadeIn">
+                <div class="titleArea">
+                    <h1 class="sectionTitle"><i class="fa fa-eye"></i>Visuals</h1>
+                </div>
+                <div class="section left full">
+                    <h1 class="subSectTitle"><img class="icon" src="images/icons/processing.png" alt="Processing Icon">Processing</h1>
+                    <p>
+                        My studies at Goldsmiths has shown me that I can be creative with the way in which I code. I was keen to explore this more and began creating small visualisations with <a href="https://processing.org" target="_blank">Processing</a>, a java based programming language / software used by Digital Artists. Check out my visuals <a href="./visuals.html">here</a>.
+                    </p>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div id="apis" class="revealOnScroll" data-animation="fadeIn">
+                <div class="titleArea">
+                    <h2 class="sectionTitle"><i class="fa fa-database"></i>API's / Scrapers</h2>
+                </div>
+                <div class="section left full">
+                    <h2 class="subSectTitle"><img class="icon" src="images/icons/python.png" alt="Python Icon">Python</h2>
+                    <p>
+                        I am fascinated by data visualisation and in 2014 I learnt Python to help me create little programs that can search a webpage and collect data later I want to expand on this and create visuals which can help to show trends with large abstract datasets.
+                    </p>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div id="cv" class="revealOnScroll" data-animation="fadeIn">
+                <p>
+                    Please check out my CV for information on previous roles and site.
+                    <br />Also, feel free to use the template if you like the look of it.
+                </p>
+                <ul>
+                    <li>
+                        <p class="iconTitle">PDF</p>
+                    </li>
+                    <li>
+                        <a href="cv/Terry%20Clark%20CV.pdf" target="_blank"><i class="fa fa-file-pdf-o fa-3x"></i></a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p class="iconTitle">PSD</p>
+                    </li>
+                    <li>
+                        <a href="cv/Terry%20Clark%20CV.psd"><i class="fa fa-file-text-o fa-3x"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <!--<div class="skew"></div>-->
+    <div id="interests">
+        <div class="container">
+            <h2 class="mainTitle">Interests</h2>
+            <div class="section middle">
+                <h4 class="addSome revealOnScroll" data-animation="fadeInLeft">Hiking</h4>
+                <h4 class="addSome revealOnScroll" data-animation="fadeInRight">Wild Camping / Camping</h4>
+                <h4 class="addSome revealOnScroll" data-animation="fadeInLeft">Cycling</h4>
+                <h4 class="addSome revealOnScroll" data-animation="fadeInRight">Coding</h4>
+                <h4 class="addSome revealOnScroll" data-animation="fadeInLeft">Hacksmiths <br /><span class=".thin">(VP of Goldsmiths hacking society)</span></h4>
+
+                <p class="addSome recently revealOnScroll" data-animation="fadeInRight">and more recently....</p>
+                <div class="titleArea">
+                    <h2 class="hackathon">Hackathons!</h2>
+                </div>
+                <div class="headerHackBox revealOnScroll" data-animation="fadeIn">
+                    <a href="https://mlh.io/" target="_blank"><img class="lazy" src="images/icons/mlh-sprite.png" alt="Major Legue Hacking Icon"></a>
+                </div>
+                <div class="hackBox revealOnScroll" data-animation="fadeInLeft">
+                    <div class="hackImage">
+                        <a href="https://astonhack.co.uk/" target="_blank"><img class="lazy" src="images/icons/acss-logo.png" alt="Aston Hack Icon at Aston University"></a>
+                    </div>
+                </div>
+                <div class="hackBox revealOnScroll" data-animation="fadeIn">
+                    <div class="hackImage">
+                        <a href="http://fablablondon.org/events/hackcess-hackathon-changing-the-lives-for-people-with-disabilities/" target="_blank"><img class="lazy" src="images/icons/hackcess.png" alt="Hackcess Icon"></a>
+                    </div>
+                </div>
+                <div class="hackBox revealOnScroll" data-animation="fadeInRight">
+                    <div class="hackImage">
+                        <a href="https://localhackday.mlh.io/" target="_blank"><img class="lazy" src="images/icons/lhd_logo.png" alt="Local Hack Day Icon"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <h2 class="mainTitle">Contact</h2>
+            <p class="middle">Feel free to send me a message below and I will try to get back to you as soon as I can.</p>
+            <div class="section middle">
+                <div class="formBack">
+                    <?php echo $result; ?>
+                        <p class="notWhite">*Please complete all Fields</p>
+                        <form action="http://formspree.io/i.am.terryclark@gmail.com" method="POST">
+                            <label for="name">Name*</label>
+                            <input type="text" id="name" name="name" placeholder="Stick your name here">
+                            <label for="email">Email*</label>
+                            <input type="email" id="email" name="_replyto" placeholder="Email here">
+                            <label for="body">Message*</label>
+                            <textarea id="body" name="message" placeholder="And message here"></textarea>
+                            <input type="hidden" name="_next" value="http://www.terrylewisclark.me" />
+                            <input type="text" name="_gotcha" style="display:none" />
+                            <input type="hidden" name="_subject" value="From My Site!" />
+                            <input type="submit" id="submit" value="SEND">
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="section">
+            <div class="left">
+                <p>Copyright TLC 2015</p>
+            </div>
+            <div class="right">
+                <ul class="social">
+                    <li><a href="http://www.facebook.com/iamterryclark" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+                    <li><a href="http://www.linkedin.com/in/iamterryclark" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+                    <li><a href="http://www.twitter.com/iamterryclark" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+                    <li><a href="mailto:i.am.terryclark@gmail.com"><i class="fa fa-envelope-o fa-2x"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="backToTop">
+        <i class="fa fa-chevron-up fa-2x"></i>
+    </div>
+
+</body>
+
+</html>
