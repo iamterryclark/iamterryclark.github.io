@@ -13,17 +13,19 @@ $(document).ready(function () {
         $("#nav-icon").removeClass("open");
     });
 
+    //Smooth Scrolling
     $(function () {
         $('a[href*=#]:not([href=#])').click(function () {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                 var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                target = target.length ? target : $('[id=' + this.hash.slice(1) + ']');
+                //$('html, body').css('height', 'auto');
                 if (target.length) {
-                    $('body').animate({
+                    $('html, body').animate({
                         scrollTop: target.offset().top
-                    }, 1000);
+                    }, 1200);
                     return false;
-                }
+                } 
             }
         });
     });
@@ -33,9 +35,10 @@ $(document).ready(function () {
         $(".nav").toggleClass("open-nav");
     });
 
+    // RevealonScroll
     //Reference: http://codepen.io/benske/full/yJoqz
     $(function () {
-        var $window = $('html, body'),
+        var $window = $('body'),
             win_height_padded = $window.height() * 1.1,
             isTouch = Modernizr.touch;
         if (isTouch) {
@@ -52,7 +55,6 @@ $(document).ready(function () {
             $(".revealOnScroll:not(.animated)").each(function () {
                 var $this = $(this),
                     offsetTop = $this.offset().top;
-
                 if (scrolled + win_height_padded > offsetTop) {
                     if ($this.data('timeout')) {
                         window.setTimeout(function () {
