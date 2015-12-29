@@ -19,7 +19,7 @@ $(document).ready(function () {
                 var target = $(this.hash);
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                 if (target.length) {
-                    $('html,body').animate({
+                    $('body').animate({
                         scrollTop: target.offset().top
                     }, 1000);
                     return false;
@@ -27,16 +27,6 @@ $(document).ready(function () {
             }
         });
     });
-
-//    // Reference: http://stackoverflow.com/questions/4326845/how-can-i-determine-the-direction-of-a-jquery-scroll-event
-//    $(window).bind('mousewheel', function (event) {
-//        if ($(window).width() > 800) {
-//            if (event.originalEvent.wheelDelta > 10) {
-//                $(".hamburger").toggleClass("visible");
-//            } else if (event.originalEvent.wheelDelta < -10) {
-//            }
-//        }
-//    });
 
     $(".navWrap").click(function () {
         $("#nav-icon").toggleClass("open");

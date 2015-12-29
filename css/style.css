@@ -38,16 +38,7 @@ hgroup {
 html,
 body {
     width: 100%;
-    /*height: 100%; /* issue with smooth scolling */
-/*
-    use this to fix the smooth scroll issue
-    but animation effects will stop working.
-    
-    height: auto;
-    min-height: 100%;
-*/
-    height: auto;
-    min-height: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
     overflow: scroll;
@@ -71,11 +62,12 @@ a {
     opacity: 0;
     /* Make elements hidden before reveal on scrolling the page*/
 }
+
 /* Import fonts from Google Fonts */
-
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300italic,400italic,700,700italic,900,900italic);
-/* ---- Main Settings ---- */
 
+
+/* ---- Main Settings ---- */
 body {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
@@ -122,40 +114,26 @@ a:hover {
     font-size: 5em;
     margin-bottom: 50px;
 }
-/* ---- Diagonal DIVs (Currently Not Working as not responsive) ---- */
-/* Reference: http://lawrencenaman.com/css/responsive-slanted-divs-with-css/
 
-#whoiam::before,
-#thingsido::before,
-#interests::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    overflow: visible;
+.sep {
     width: 100%;
-    height: 100px;
-    z-index: 1;
-    transform: skew(0deg, -3deg);
-    -ms-transform: skew(0deg, -3deg);
-    -webkit-transform: skew(0deg, -3deg);
+    height: 0;
+    padding: 160px 0 0;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background: cover;
+    position: absolute;
+    z-index: 1; 
 }
 
-#whoiam::before {
-    top: 810px;
-    background: #fff;
+.top {    
+    bottom: -10px;
 }
 
-#thingsido::before,
-#thingsido::after {
-    top: 1510px;
-    background: #cbad98;
+/*
+.backwhite {
+    background-image: url('data:image/svg+xml, <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2400 231" enable-background="new 0 0 2600 231" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M0,0l2400,0v231L0,0"/></svg>')
 }
-
-#thingsido::after {
-    top: 3030px;
-    background: #fff;
-}
-
 */
 
 #whoiam,
@@ -166,7 +144,6 @@ a:hover {
     margin: 0 auto;
     width: 100%;
     padding: 100px 0;
-    z-index: 1;
 }
 
 #contact {
@@ -587,6 +564,7 @@ strong {
     width: 100%;
     margin-bottom: 50px;
 }
+
 /* Reference http://inspirationalpixels.com/tutorials/creating-an-accordion-with-html-css-jquery#html */
 /*----- Accordion -----*/
 /*
