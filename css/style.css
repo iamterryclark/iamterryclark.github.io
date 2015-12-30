@@ -372,7 +372,7 @@ textarea {
     margin: 0 auto;
     width: 90%;
     line-height: 1em;
-    font-size: 1em;
+    font-size: 1.1em;
     background: #efefef;
     border: 1px solid #dedede;
     padding: 10px;
@@ -399,21 +399,21 @@ textarea:focus {
 }
 
 ::-webkit-input-placeholder {
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 :-moz-placeholder {
     /* Firefox 18- */
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 ::-moz-placeholder {
     /* Firefox 19+ */
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 :-ms-input-placeholder {
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 button {
@@ -436,6 +436,7 @@ button:hover {
     background: #aaa;
     color: #fff;
 }
+
 
 /*
 .alert-success,
@@ -461,6 +462,7 @@ button:hover {
 }
 */
 
+
 /* ---- Footer Section ---- */
 
 footer {
@@ -484,6 +486,7 @@ footer p {
     margin-right: 10px;
     font-size: 1.3em;
 }
+
 
 /*
 .backToTop {
@@ -576,32 +579,7 @@ strong {
     }
 }
 
-@media screen and (max-width: 1000px) {
-    .nav li {
-        margin: 0 0.4em;
-    }
-    .imageMe {
-        width: 300%;
-    }
-    #whoiam p {
-        margin: 0px auto;
-    }
-    .twoThirds {
-        text-align: center;
-        margin-bottom: 0;
-        width: 100%;
-    }
-    .left {
-        float: none;
-        text-align: center;
-    }
-    .half {
-        width: 100%;
-        margin-bottom: 50px;
-    }
-}
-
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1024px) {
     .hamburger {
         display: none;
     }
@@ -617,6 +595,8 @@ strong {
     .nav li {
         display: block;
         margin: 0;
+        font-size: 2.5em;
+        line-height: 2em;
         width: 100%;
     }
     .open-nav {
@@ -701,34 +681,49 @@ strong {
         left: 50%;
     }
     /* End of Mobile Hamburger */
-    .splashScreen {
-        padding-top: 100px;
-        padding-bottom: 50px;
-        height: 400px;
-        background-image: url(../images/memain.png);
-        background-position: top center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
     .titleLarge {
         text-align: center;
-        margin-top: 0px;
-        font-size: 6em;
+        font-size: 8em;
     }
     .mainTitle {
-        font-size: 3em;
+        font-size: 4em;
+        margin-bottom: 20px;
+    }
+    .imageMe {
+        width 300%;
+    }
+    .imageMe img {
+        margin: 20px 0 0 0;
     }
     .sectionTitle {
-        font-size: 2em;
+        font-size: 3em;
+        margin: 100px 0 50px 0;
     }
     .subSectTitle {
-        font-size: 2em;
+        font-size: 3em;
+        margin-bottom: 30px;
     }
     p {
-        font-size: 1.4em;
+        font-size: 1.6em;
+    }
+    .third {
+        width: 100%;
+    }
+    .twoThirds {
+        text-align: center;
+        margin-bottom: 0;
+        width: 100%;
+    }
+    .left {
+        float: none;
+        text-align: center;
+    }
+    .half {
+        width: 100%;
+        margin-bottom: 50px;
     }
     .addSome {
-        font-size: 2em;
+        font-size: 3em;
     }
     .section .icon {
         width: 40px;
@@ -738,10 +733,10 @@ strong {
         position: relative;
         display: block;
         margin: 0 auto 30px auto;
-        width: 60%;
+        width: 40%;
     }
     .headerHackBox img {
-        width: 60%;
+        width: 40%;
         margin: 50px 0 30px;
     }
     .hackathon {
@@ -753,20 +748,20 @@ strong {
     footer p {
         position: absolute;
         text-align: center;
-        top: 20px;
+        top: 15px;
         left: 0;
         right: 0;
     }
     .social {
         position: absolute;
         text-align: center;
-        top: 55px;
+        top: 60px;
         left: 0;
         right: 0;
     }
     .social li {
         display: inline-block;
-        margin-right: 10px;
+        margin: 0 15px;
         font-size: 1.3em;
     }
 }
@@ -775,19 +770,18 @@ strong {
     .splashScreen {
         height: 65vh;
     }
-    
     #whoiam,
     #thingsido,
     #interests,
     #contact {
-        padding: 30px 0;
+        padding: 50px 0;
     }
-    
     .mainTitle {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
     .imageMe img {
         width: 250px;
+        margin-bottom: 10px;
     }
     .titleLarge {
         margin-top: 60px;
