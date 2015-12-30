@@ -38,58 +38,15 @@ $(document).ready(function () {
     });
 
     $(function () {
-        $('.revealScroll').bind('inview', function (event, visible) {
+        $('.revealScroll').bind('inview', function (event, visible, visiblePartY) {
             if (visible) {
                 // element is now visible in the viewport
                 $(this).addClass('animated ' + $(this).data('animation'));
-            } else {
-                // element has gone out of viewport
-                $(this).removeClass('animated fadeInLeft fadeInRight fadeIn')
+//                if ($('.revealScoll .animated') && visiblePartY == 'top') {
+//                    $(this).removeClass('animated fadeInLeft fadeInRight fadeIn');
+//                }
             }
+
         });
     });
-
-    //    // RevealonScroll
-    //    //Reference: http://codepen.io/benske/full/yJoqz
-    //    $(function () {
-    //        var $window = $('body'),
-    //            win_height_padded = $window.height() * 1.1,
-    //            isTouch = Modernizr.touch;
-    //        if (isTouch) {
-    //            $('.revealOnScroll').addClass('animated');
-    //        }
-    //
-    //        $window.on('scroll', revealOnScroll);
-    //
-    //        function revealOnScroll() {
-    //            var scrolled = $window.scrollTop(),
-    //                win_height_padded = $window.height() * 1.1;
-    //
-    //            // Showed...
-    //            $(".revealOnScroll:not(.animated)").each(function () {
-    //                var $this = $(this),
-    //                    offsetTop = $this.offset().top;
-    //                if (scrolled + win_height_padded > offsetTop) {
-    //                    if ($this.data('timeout')) {
-    //                        window.setTimeout(function () {
-    //                            
-    //                        }, parseInt($this.data('timeout'), 10));
-    //                    } else {
-    //                        
-    //                    }
-    //                }
-    //            });
-    //
-    //            // Hidden...
-    //            $(".revealOnScroll.animated").each(function (index) {
-    //                var $this = $(this),
-    //                    offsetTop = $this.offset().top;
-    //
-    //                if (scrolled + win_height_padded < offsetTop) {
-    //                    
-    //                }
-    //            });
-    //        }
-    //        revealOnScroll();
-    //    });
 });

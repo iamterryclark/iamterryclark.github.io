@@ -33,6 +33,8 @@ hgroup {
     font: inherit;
     vertical-align: baseline;
 }
+
+
 /* HTML5 display-role reset for older browsers */
 
 html,
@@ -45,8 +47,6 @@ body {
     overflow: scroll;
     line-height: 1;
 }
-
-
 
 ol,
 ul {
@@ -62,14 +62,17 @@ a {
 }
 
 .revealScroll {
-    opacity: 0; /* Make elements hidden before reveal on scrolling the page */
+    opacity: 0;
+    /* Make elements hidden before reveal on scrolling the page */
 }
 
+
 /* Import fonts from Google Fonts */
+
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300italic,400italic,700,700italic,900,900italic);
 
-
 /* ---- Main Settings ---- */
+
 body {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
@@ -89,7 +92,6 @@ p {
     font-size: 1.4em;
     line-height: 1.4em;
     letter-spacing: 0.02em;
-
 }
 
 a,
@@ -141,6 +143,8 @@ a:hover {
     max-width: 1080px;
     margin: 0 auto;
 }
+
+
 /* ---- Header ---- */
 
 .logo {
@@ -162,18 +166,9 @@ a:hover {
     border-radius: 5px;
     font-size: 1.3em;
     z-index: 999;
-    
     -webkit-transition: .7s cubic-bezier(.77, 0, .175, 1);
     -o-transition: .7s cubic-bezier(.77, 0, .175, 1);
     transition: .7s cubic-bezier(.77, 0, .175, 1);
-}
-
-.invisible {
-    opacity: 0;
-}
-
-.visible {
-    opacity: 1;
 }
 
 .ham-close {
@@ -226,13 +221,15 @@ a:hover {
 .nav .active {
     border-bottom: 9px solid #fff;
 }
+
+
 /*---- Main Section ----*/
 
 .splashScreen {
     position: relative;
     padding-top: 160px;
     padding-bottom: 100px;
-    height: 600px;
+    height: 70vh;
     background-image: url(../images/memain.png);
     background-position: top center;
     background-size: cover;
@@ -266,6 +263,8 @@ a:hover {
     font-weight: 900;
     color: #fff;
 }
+
+
 /* ---- Who I Am Section ---- */
 
 #whoiam p {
@@ -275,6 +274,8 @@ a:hover {
 .imageMe img {
     width: 300px;
 }
+
+
 /* ---- Things I Do Section ----*/
 
 .sectionTitle {
@@ -318,6 +319,8 @@ a:hover {
 .iconTitle {
     margin-bottom: 10px;
 }
+
+
 /* ---- Interests Section ---- */
 
 .headerHackBox img {
@@ -339,6 +342,8 @@ a:hover {
     width: 100%;
     vertical-align: middle;
 }
+
+
 /* ---- Contact Section ---- */
 
 .formBack {
@@ -411,22 +416,28 @@ textarea:focus {
     font-size: 1.2em;
 }
 
-#submit {
+button {
+    background: #efefef;
+    color: #3a3a3a;
+    font-size: 1.1em;
+    letter-spacing: 0.5px;
     margin: 0 auto;
     width: 40%;
     height: 50px;
     margin-top: 20px;
+    border: 1px solid #dedede;
     cursor: pointer;
     -webkit-transition: .2s linear;
     -o-transition: .2s linear;
     transition: .2s linear;
 }
 
-#submit:hover {
+button:hover {
     background: #aaa;
     color: #fff;
 }
 
+/*
 .alert-success,
 .alert-danger {
     width: 70%;
@@ -448,6 +459,7 @@ textarea:focus {
     background-color: #f7b4b5;
     border: 1px solid #860809;
 }
+*/
 
 /* ---- Footer Section ---- */
 
@@ -473,9 +485,9 @@ footer p {
     font-size: 1.3em;
 }
 
+/*
 .backToTop {
     display: none;
-/*
     position: absolute;
     background-color: #d1c0b4;
     color: #fff;
@@ -486,8 +498,10 @@ footer p {
     height: 30px;
     padding: 2px 5px 10px 5px ;
     z-index: 100000;
-*/
+
 }
+*/
+
 
 /* ---- Extra CSS Styling ---- */
 
@@ -546,6 +560,7 @@ strong {
     margin-bottom: 50px;
 }
 
+
 /* ---- Responsive ---- */
 
 @media screen and (max-width: 1180px) {
@@ -565,7 +580,6 @@ strong {
     .nav li {
         margin: 0 0.4em;
     }
-    
     .imageMe {
         width: 300%;
     }
@@ -591,13 +605,11 @@ strong {
     .hamburger {
         display: none;
     }
-   
     .nav {
         left: -100%;
         top: 0;
         height: 100%;
         background-color: #d1c0b4;
-
         -webkit-transition: left .7s cubic-bezier(.77, 0, .175, 1);
         -o-transition: left .7s cubic-bezier(.77, 0, .175, 1);
         transition: left .7s cubic-bezier(.77, 0, .175, 1);
@@ -607,31 +619,28 @@ strong {
         margin: 0;
         width: 100%;
     }
-    
     .open-nav {
         left: 0;
         height: 100%;
     }
-    
     .logo {
         font-size: 3em;
         top: 25px;
         left: 20px;
     }
     /* Mobile Hamburger Animated */
-    #nav-icon, .navWrap {
+    #nav-icon,
+    .navWrap {
         position: fixed;
         width: 37px;
         height: auto;
         cursor: pointer;
         z-index: 999;
     }
-    
     #nav-icon {
         right: 30.6px;
         top: 30px;
     }
-    
     .navWrap {
         top: 24px;
         right: 25px;
@@ -639,10 +648,7 @@ strong {
         border-radius: 3px;
         height: 35px;
         padding: 5px 6px;
-
-        
     }
-    
     #nav-icon span {
         display: block;
         position: absolute;
@@ -653,7 +659,6 @@ strong {
         opacity: 1;
         left: 0;
         z-index: 100000;
-        
         -webkit-transform: rotate(0deg);
         -moz-transform: rotate(0deg);
         -o-transform: rotate(0deg);
@@ -695,7 +700,6 @@ strong {
         width: 0%;
         left: 50%;
     }
-
     /* End of Mobile Hamburger */
     .splashScreen {
         padding-top: 100px;
@@ -768,19 +772,29 @@ strong {
 }
 
 @media screen and (max-width: 490px) {
+    .splashScreen {
+        height: 65vh;
+    }
+    
     #whoiam,
     #thingsido,
     #interests,
     #contact {
-        padding: 50px 0;
-        z-index: 400;
+        padding: 30px 0;
+    }
+    
+    .mainTitle {
+        margin-bottom: 10px;
+    }
+    .imageMe img {
+        width: 250px;
     }
     .titleLarge {
         margin-top: 60px;
         font-size: 3.6em;
     }
     .formBack {
-        width: 90%;
+        width: 94%;
         margin: 30px auto;
         padding: 10px;
     }
