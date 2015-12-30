@@ -39,7 +39,7 @@ html,
 body {
     width: 100%;
     height: auto;
-   /* min-height: 100%;*/
+    min-height: 100%;
     margin: 0;
     padding: 0;
     overflow: scroll;
@@ -61,9 +61,8 @@ a {
     clear: both;
 }
 
-.revealOnScroll {
-    opacity: 0;
-    /* Make elements hidden before reveal on scrolling the page*/
+.revealScroll {
+    opacity: 0; /* Make elements hidden before reveal on scrolling the page */
 }
 
 /* Import fonts from Google Fonts */
@@ -117,27 +116,6 @@ a:hover {
     font-size: 5em;
     margin-bottom: 50px;
 }
-
-.sep {
-    width: 100%;
-    height: 0;
-    padding: 160px 0 0;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background: cover;
-    position: absolute;
-    z-index: 1; 
-}
-
-.top {    
-    bottom: -10px;
-}
-
-/*
-.backwhite {
-    background-image: url('data:image/svg+xml, <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2400 231" enable-background="new 0 0 2600 231" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M0,0l2400,0v231L0,0"/></svg>')
-}
-*/
 
 #whoiam,
 #thingsido,
@@ -568,55 +546,6 @@ strong {
     margin-bottom: 50px;
 }
 
-/* Reference http://inspirationalpixels.com/tutorials/creating-an-accordion-with-html-css-jquery#html */
-/*----- Accordion -----*/
-/*
-.accordion,
-.accordion * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-.accordion {
-    overflow:hidden;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
-    border-radius: 3px;
-    background: #f7f7f7;
-}*/
-/*----- Section Titles -----*/
-/*
-.accordion-section-title {
-    width: 100%;
-    padding: 15px;
-    display: inline-block;
-    border-bottom: 1px solid #1a1a1a;
-    background: #333;
-    transition: all linear 0.15s;
-    font-size: 1.200em;
-    text-shadow: 0px 1px 0px #1a1a1a;
-    color: #fff;
-}
-
-.accordion-section-title.active,
-.accordion-section-title:hover {
-    background: #4c4c4c;
-    text-decoration: none;
-}
-
-.accordion-section:last-child .accordion-section-title {
-    border-bottom: none;
-}
-/*
-
-/*----- Section Content -----*/
-/*
-.accordion-section-content {
-    padding: 15px;
-    display: none;
-}
-*/
-/* End of reference */
 /* ---- Responsive ---- */
 
 @media screen and (max-width: 1180px) {
