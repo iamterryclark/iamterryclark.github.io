@@ -356,21 +356,21 @@ a:hover {
 
 label {
     display: block;
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: 900;
     font-style: normal;
     letter-spacing: 0.04em;
     text-align: left;
     color: #000;
-    width: 94%;
-    margin: 9px auto;
+    width: 90%;
+    margin: 20px 10px;
 }
 
 input,
 textarea {
     display: block;
-    margin: 0 auto;
-    width: 90%;
+    margin: 10px auto;
+    width: 95%;
     line-height: 1em;
     font-size: 1.1em;
     background: #efefef;
@@ -388,6 +388,7 @@ textarea {
 
 .notWhite {
     color: #000;
+    font-size: 0.8em;  /*-- shrinking suggestion for prompt text --*/
     text-align: left !important;
     margin-top: 10px !important;
 }
@@ -577,6 +578,27 @@ strong {
     .nav li {
         margin: 0 1em;
     }
+    
+    
+    /*--suggested desktop form styling--*/
+    
+    label {
+    font-size: 1.5em;
+    margin: 10px auto;
+}
+    
+    input, textarea {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .notWhite {
+    font-size: 0.8em;
+    text-align: left !important;
+    margin-top: 10px !important;
+    margin-left: 8px !important;
+}
+    
 }
 
 @media screen and (max-width: 1024px) {
@@ -592,13 +614,24 @@ strong {
         -o-transition: left .7s cubic-bezier(.77, 0, .175, 1);
         transition: left .7s cubic-bezier(.77, 0, .175, 1);
     }
+    
+    /*---suggested font size & vertical centering of menu on tablet --*/
     .nav li {
         display: block;
-        margin: 0;
-        font-size: 2.5em;
-        line-height: 2em;
+        margin: auto;
+        font-size: 2em;
+        line-height: 3em;
         width: 100%;
     }
+    
+    .nav li:first-child {
+        margin-top: 120px;
+}
+    
+     label {
+        margin-top: 15px; /*--suggested spacing of input/label groups for tablet--*/
+    }
+    
     .open-nav {
         left: 0;
         height: 100%;
@@ -776,6 +809,22 @@ strong {
     #contact {
         padding: 50px 0;
     }
+    
+    
+    
+    .nav li {    /*---suggested shrinking & vertical centering of menu on mobile --*/
+        display: block;
+        margin: auto;
+        font-size: 1.5em;
+        line-height: 3em;
+        width: 100%;
+    }
+    
+    .nav li:first-child {
+        margin-top: 60px;
+}
+    
+    
     .mainTitle {
         margin-bottom: 20px;
     }
@@ -792,6 +841,11 @@ strong {
         margin: 30px auto;
         padding: 10px;
     }
+    
+    label {
+        margin-top: 30px; /*--suggested spacing of input/label groups for mobile--*/
+    }
+    
     p {
         font-size: 1em;
     }
